@@ -1,23 +1,21 @@
 class User {
   String name;
-  String? id;
-  String reservationDate;
-  String startDay;
-  int numNights;
+  int tableNumber;
+  String foodOrdered;
+  DateTime date;
   User(
       {required this.name,
-      this.id,
-      required this.reservationDate,
-      required this.startDay,
-      required this.numNights});
+      required this.tableNumber,
+      required this.foodOrdered,
+      required this.date});
 
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'name': name,
-        'Reservation Date': reservationDate,
-        'Start Day': startDay,
-        'Number Nights': numNights
-      };
+  // Map<String, dynamic> toJson() => {
+  //       'id': id,
+  //       'name': name,
+  //       'Reservation Date': reservationDate,
+  //       'Start Day': startDay,
+  //       'Number Nights': numNights
+  //     };
 
   // static User fromJson(Map<String, dynamic> json) => User(
   //       id: json('id'),

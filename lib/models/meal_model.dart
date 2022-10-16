@@ -39,3 +39,4 @@ Meal hrira = Meal(
     rating: 5.0);
 
 List<Meal> popularMeals = [couscous, rechta, chorba, hrira];
+int tableNumber = 1;
