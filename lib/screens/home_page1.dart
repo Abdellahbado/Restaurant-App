@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restau_app/models/meal_model.dart';
+import 'package:restau_app/widgets/popular_tile.dart';
 
 class HomePage1 extends StatefulWidget {
   const HomePage1({super.key});
@@ -24,9 +25,9 @@ class _HomePage1State extends State<HomePage1> {
       ),
       // ignore: prefer_const_literals_to_create_immutables
       body: ListView(children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: const Text(
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text(
             "Find the best food for you",
             style: TextStyle(
               color: Colors.black87,
@@ -53,37 +54,16 @@ class _HomePage1State extends State<HomePage1> {
         const SizedBox(
           height: 20.0,
         ),
-        Expanded(
-          child: SizedBox(
-            height: 300.0,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: popularMeals.length,
-              itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    Container(
-                      height: 200,
-                      width: 200,
-                      child: Image.asset(popularMeals[index].imgLocation),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Text(popularMeals[index].name),
-                          Text(
-                            '★ ${popularMeals[index].rating}',
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                );
-              },
+        const Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Text(
+            'Popular food',
+            style: TextStyle(
+              fontSize: 16.0,
             ),
           ),
         ),
+        const PopularTile(),
       ]),
     );
   }
