@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:restau_app/screens/api_test.dart';
 import 'package:restau_app/screens/home_page.dart';
 import 'package:restau_app/screens/home_page1.dart';
 import 'package:restau_app/widgets/reserv_form_widget.dart';
@@ -21,12 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
         style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
       ),
     ),
-    Center(
-      child: const Text(
-        'Liked',
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-      ),
-    ),
+    TestApi(),
     ReservForm(),
     Center(
       child: const Text(

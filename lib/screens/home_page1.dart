@@ -64,6 +64,7 @@ class _HomePage1State extends State<HomePage1> {
           ),
         ),
         const PopularTile(),
+        
       ]),
     );
   }

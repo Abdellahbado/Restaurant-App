@@ -1,15 +1,29 @@
 class Meal {
-  String description;
+  String? description;
   String name;
   bool isliked;
   String imgLocation;
-  num rating;
+  double rating;
   Meal(
-      {required this.description,
+      {this.description,
       required this.rating,
       required this.name,
       required this.isliked,
       required this.imgLocation});
+
+  factory Meal.fromJson(dynamic json) {
+    return Meal(
+        name: json['name'] as String,
+        imgLocation: json['images'][0]['hostedLargeUrl'] as String,
+        rating: json['rating'] as double,
+        isliked: true);
+  }
+
+  static List<Meal> recipesFromSnapshot(List snapshot) {
+    return snapshot.map((data) {
+      return Meal.fromJson(data);
+    }).toList();
+  }
 }
 
 Meal couscous = Meal(

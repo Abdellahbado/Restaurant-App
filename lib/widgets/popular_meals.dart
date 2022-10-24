@@ -35,7 +35,21 @@ class _PopularMealsState extends State<PopularMeals> {
             ],
           ),
         ),
-        ListView.builder(
+        ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            Container(
+              color: Colors.amber,
+            ),
+            Container(
+              color: Colors.amber[200],
+            ),
+            Container(
+              color: Colors.amber[800],
+            ),
+          ],
+        )
+        /*ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: popularMeals.length,
           itemBuilder: (context, index) {
@@ -60,7 +74,7 @@ class _PopularMealsState extends State<PopularMeals> {
               ],
             );
           },
-        )
+        )*/
       ],
     );
   }
